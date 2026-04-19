@@ -1,0 +1,698 @@
+/* ========================================
+   Catholic Faith Guardian - Style Sheet
+   Modern, Professional Educational Design
+   ======================================== */
+
+/* RTL Support for Arabic */
+html[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+}
+
+html[lang="ar"] body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, 'Droid Arabic Naskh', sans-serif;
+    text-align: right;
+}
+
+html[lang="ar"] .nav-container {
+    flex-direction: row-reverse;
+}
+
+html[lang="ar"] .logo {
+    flex-direction: row-reverse;
+}
+
+html[lang="ar"] .hamburger span {
+    margin: 6px 0;
+}
+
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3,
+html[lang="ar"] h4, html[lang="ar"] h5, html[lang="ar"] h6,
+html[lang="ar"] p {
+    text-align: right;
+}
+
+html[lang="ar"] ul {
+    text-align: right;
+}
+
+html[lang="ar"] .detail-section {
+    text-align: right;
+}
+
+html[lang="ar"] .card {
+    text-align: right;
+}
+
+html[lang="ar"] .footer-container {
+    text-align: right;
+}
+
+html[lang="ar"] .hero-content {
+    text-align: center;
+}
+
+html[lang="ar"] .language-switcher {
+    flex-direction: row-reverse;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #2c2c2c;
+    background-color: #faf9f7;
+    line-height: 1.6;
+}
+
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e8e6e0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a472a;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo:hover {
+    color: #c9a961;
+    transition: color 0.3s ease;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #c9a961;
+    border-bottom-color: #c9a961;
+}
+
+.nav-link.active {
+    color: #1a472a;
+    border-bottom-color: #c9a961;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2.5px;
+    background-color: #1a472a;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    background: linear-gradient(135deg, #1a472a 0%, #2d6f4a 100%);
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(201, 169, 97, 0.1) 0%, transparent 70%);
+    animation: float 20s ease-in-out infinite;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: #c9a961;
+    color: #ffffff;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.25);
+}
+
+.cta-button:hover {
+    background-color: #d4b877;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.35);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+/* ========================================
+   MAIN CONTENT & SECTIONS
+   ======================================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+    border-bottom: 1px solid #e8e6e0;
+}
+
+.section:last-child {
+    border-bottom: none;
+    padding-bottom: 100px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: #1a472a;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========================================
+   CARDS & GRID LAYOUT
+   ======================================== */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 0;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #c9a961;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-left-color: #1a472a;
+}
+
+.card-title {
+    font-size: 1.6rem;
+    color: #1a472a;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-text {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: #c9a961;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.card-link:hover {
+    color: #1a472a;
+    transform: translateX(5px);
+}
+
+/* ========================================
+   FEATURED SECTION (Home Page)
+   ======================================== */
+
+.featured-topics {
+    background-color: #f4f2ee;
+    padding: 80px 0;
+}
+
+.featured-topics .section-title {
+    margin-bottom: 50px;
+}
+
+/* ========================================
+   EXPLORE SECTION (Home Page)
+   ======================================== */
+
+.explore-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.explore-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.explore-text {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.explore-button {
+    background-color: #1a472a;
+    color: #ffffff;
+    padding: 12px 35px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #2d6f4a;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   DETAIL SECTIONS (Topic Pages)
+   ======================================== */
+
+.detail-section {
+    padding: 60px 0;
+    border-bottom: 1px solid #e8e6e0;
+}
+
+.detail-section:last-child {
+    border-bottom: none;
+}
+
+.detail-title {
+    font-size: 2rem;
+    color: #1a472a;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.detail-content {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.detail-highlight {
+    background-color: #f9f7f3;
+    border-left: 4px solid #c9a961;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background-color: #2c2c2c;
+    color: #e8e6e0;
+    padding: 60px 20px;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    color: #c9a961;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #e8e6e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #c9a961;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 30px;
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLET (768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #ffffff;
+        gap: 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        border-bottom: 1px solid #e8e6e0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid #e8e6e0;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 16px 20px;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+
+    .nav-link:hover {
+        background-color: #f4f2ee;
+        border-left-color: #c9a961;
+        border-bottom: none;
+    }
+
+    .nav-link.active {
+        background-color: #f4f2ee;
+        border-left-color: #c9a961;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* ========================================
+   LANGUAGE SWITCHER
+   ======================================== */
+
+.language-switcher {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.lang-btn {
+    padding: 8px 12px;
+    border: 2px solid #c9a961;
+    background-color: transparent;
+    color: #1a472a;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+    background-color: #c9a961;
+    color: #ffffff;
+}
+
+.lang-btn.active {
+    background-color: #1a472a;
+    color: #c9a961;
+    border-color: #1a472a;
+}
+
+html[lang="ar"] .language-switcher {
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE (480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+    .nav-container {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .detail-title {
+        font-size: 1.5rem;
+    }
+
+    .detail-content {
+        font-size: 0.95rem;
+    }
+
+    .footer-container {
+        gap: 20px;
+    }
+
+    footer {
+        padding: 40px 15px;
+        margin-top: 50px;
+    }
+}
